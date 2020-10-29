@@ -4,15 +4,24 @@
 
 body {
     height: 100vh;
-    background-color: #efefef;
+    background-color: #dfdfdf;
     display:flex;
     justify-content: center;
     align-items: center;
 }
-.content {
+.conteudo {
     background-color: white;
-    width: 90%;
-    max-width: 375px;
     box-shadow: 0px 2px 2px 0px rgba(0, 0, 0, 0.12),
         0px 3px 1px -2px rgba(0, 0, 0, 0.12), 0px 1px 5px 0px rgba(0, 0, 0, 0.2);
+}
+
+.controls{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: 0 3px;
+}
+
+.controls > * {
+    margin: 0 10px;
 }
