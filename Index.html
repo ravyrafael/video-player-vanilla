@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Video Player</title>
     <link rel="stylesheet" href="index.css">
     <script src="videos.js"></script>
 </head>
@@ -28,10 +28,21 @@
                     <input type="range" min="0" value="0" id="video-time">
                     <span id="total-time">00:00</span>
                     <a href="#" id="full-screen"><i class="material-icons">fullscreen</i></a>
+                    <span class="volume-div" >
+                        <a href="#" id="mute"><i class="material-icons">volume_up</i></a>
+                        <input type="range" class="volume" min="0" max="100" value="100" id="volume">
+                    </span>
+
                 </div>
             </div>
         </div>
         <div class="sidebar">
+            <div>
+                <video src="files/video-1.mp4"> </video>
+            </div>
+            <div>
+                <video src="files/video-1.mp4"> </video>
+            </div>
             <div>
                 <video src="files/video-1.mp4"> </video>
             </div>
