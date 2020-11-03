@@ -1,25 +1,65 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Video Player</title>
     <link rel="stylesheet" href="index.css">
     <script src="videos.js"></script>
 </head>
+
 <body>
- <div class="conteudo">
-     <div>
-      <video id="player">  </video>
+    <div class="navbar">
+        <i class="material-icons">menu</i>
     </div>
-    <div class="controls">
-        <a href="#" id="play-pause"><i class="material-icons">play_arrow</i></a>
-        <span id="current-time">00:00</span>
-        <input type="range" min="0" value="0" id="video-time">
-        <span id="total-time">00:00</span>
-        <a href="#" id="full-screen"><i class="material-icons">fullscreen</i></a>
+
+    <div class="body">
+        <div class="conteudo" id="conteudo">
+
+            <video id="player"> </video>
+
+            <div class="details">
+                <div id="title"></div>
+                <div class="controls">
+                    <a href="#" id="play-pause"><i class="material-icons">play_arrow</i></a>
+                    <a href="#" id="next-arrow"><i class="material-icons">keyboard_tab</i></a>
+                    <span id="current-time">00:00</span>
+                    <input type="range" min="0" value="0" id="video-time">
+                    <span id="total-time">00:00</span>
+                    <a href="#" id="full-screen"><i class="material-icons">fullscreen</i></a>
+                    <span class="volume-div" >
+                        <a href="#" id="mute"><i class="material-icons">volume_up</i></a>
+                        <input type="range" class="volume" min="0" max="100" value="100" id="volume">
+                    </span>
+
+                </div>
+            </div>
+        </div>
     </div>
-</div>
+    <div class="body">
+        <div class="conteudo" id="conteudo2">
+
+            <video id="player"> </video>
+
+            <div class="details">
+                <div id="title"></div>
+                <div class="controls">
+                    <a href="#" id="play-pause"><i class="material-icons">play_arrow</i></a>
+                    <a href="#" id="next-arrow"><i class="material-icons">keyboard_tab</i></a>
+                    <span id="current-time">00:00</span>
+                    <input type="range" min="0" value="0" id="video-time">
+                    <span id="total-time">00:00</span>
+                    <a href="#" id="full-screen"><i class="material-icons">fullscreen</i></a>
+                    <span class="volume-div" >
+                        <a href="#" id="mute"><i class="material-icons">volume_up</i></a>
+                        <input type="range" class="volume" min="0" max="100" value="100" id="volume">
+                    </span>
+
+                </div>
+            </div>
+        </div>
+    </div>
 </body>
 <script src="index.js"></script>
 

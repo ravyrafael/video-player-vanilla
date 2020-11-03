@@ -1,19 +1,50 @@
 @import "https://cdnjs.cloudflare.com/ajax/libs/material-design-icons/3.0.1/iconfont/material-icons.min.css";
 @import "https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css";
 
+:root {
+    --primary:#ffffff;
+    --hovered: #afa2a2
+  }
 
-body {
+.body {
     height: 100vh;
-    background-color: #dfdfdf;
+    background-color: #efefef;
     display:flex;
-    justify-content: center;
     align-items: center;
+    padding: 30px;
 }
-.conteudo {
+
+
+  
+.navbar{
+    background-color: #ffffff;
+    padding: 10px;
+    width: 100%;
+    position:fixed
+}
+
+.conteudo, .conteudo2 {
+  margin-right: 30px;
     background-color: white;
     box-shadow: 0px 2px 2px 0px rgba(0, 0, 0, 0.12),
         0px 3px 1px -2px rgba(0, 0, 0, 0.12), 0px 1px 5px 0px rgba(0, 0, 0, 0.2);
+        position: relative;
+        
 }
+video{
+    display: block;
+    height: auto;
+    transition: .5s ease;
+    backface-visibility: hidden;
+}
+
+.conteudo:hover .video {
+    opacity: 0.3;
+  }
+  
+  .conteudo:hover .details {
+    opacity: 1;
+  }
 
 .controls{
     display: flex;
@@ -22,6 +53,109 @@ body {
     margin: 0 3px;
 }
 
+#volume {
+
+  width: 100px;
+}
+
+input[type="range"]::-webkit-slider-thumb {
+  background-color: var(--primary);
+}
+
+input[type="range"]::-moz-range-thumb {
+  background-color: var(--primary);
+}
+
+input[type="range"]::-ms-thumb {
+  background-color: var(--primary);
+}
+
+input[type="range"]:hover::-webkit-slider-thumb {
+    background-color: var(--hovered);
+  }
+  
+  input[type="range"]:hover::-moz-range-thumb {
+    background-color: var(--hovered);
+  }
+  
+  input[type="range"]:hover::-ms-thumb {
+    background-color: var(--hovered);
+  }
+
+#next-arrow, #play-pause, #full-screen, #mute {
+  color: var(--primary);
+}
+#next-arrow:hover, #play-pause:hover,#full-screen:hover, #mute:hover{
+    color: var(--hovered);
+  }  
+
+  .volume{
+    opacity: 0;
+    transition: .5s ease;
+  }
+
+  .volume-div{
+    display: inline-flex;
+  }
+
+  .volume-div:hover .volume {
+    opacity: 1;
+    display:flex
+  }
+
+
+
+.details{
+    font-size: large;
+    color: #efefef;
+    transition: .5s ease;
+    opacity: 0; 
+    position: absolute;
+    top: 94%;
+    left: 50%;
+    width: 100%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    padding-top: 20px;
+    background: linear-gradient(#00000014, #000000f0);
+}
+
+#mute{
+  align-items: center;
+  vertical-align: middle;
+  justify-content: center;
+  display: flex
+}
+
 .controls > * {
     margin: 0 10px;
+}
+
+.details{
+    display: fixed
+}
+
+.controls > * {
+    margin: 0 10px;
+}
+
+.sidebar{
+  background-color: rgb(245, 245, 245);
+  box-shadow: 0px 2px 2px 0px rgba(0, 0, 0, 0.12),
+  0px 3px 1px -2px rgba(0, 0, 0, 0.12), 0px 1px 5px 0px rgba(0, 0, 0, 0.2);
+  height: 100%;
+  overflow-y:scroll
+
+}
+
+.sidebar > div{
+  margin: 30px
+}
+
+.sidebar > div > video{
+  height: 300px;
+}
+
+#title{
+    margin-left: 4%;
 }
